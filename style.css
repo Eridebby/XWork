@@ -23,8 +23,10 @@ body {
 }
 
 .nav {
-    /* width: 100%;
-    position: fixed; */
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     background-color: #ffff;
@@ -32,6 +34,8 @@ body {
     color: white;
     height: 70px;
     padding: 0 15px 0 15px;
+    box-shadow: 2px 5px 10px 0px rgba(71, 176, 228, 0.1);
+  
 }
 
 .nav .logo {
@@ -64,7 +68,7 @@ body {
 }
 
 .nav .nav-links li a {
-    font-size: 15px;
+    font-size: 13.5px;
     text-decoration: none;
     color: var(--secondary-color);
     font-family: var(--text-font);
@@ -76,15 +80,20 @@ body {
 
 .button,
 .link-button {
-    width: 150px;
+    width: 130px;
     height: 40px;
-    margin-right: 4rem;
+    margin-right: 3.9rem;
     margin-top: 1.2rem;
     background-color: var(--primary-color);
     color: #ffff;
     border-radius: 5px;
     border: none;
     cursor: pointer;
+}
+.button:hover,
+.link-button:hover{
+    background-color: #ffff;
+    border: 1px solid var(--secondary-color);
 }
 
 .button a,
@@ -94,21 +103,26 @@ body {
 
 }
 
-.nav .nav-links li::after {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 3px;
-    background-color: white;
-    left: 0;
+.button a:hover,
+.link-button a:hover{
+color: var(--secondary-color);
+}
+
+
+.nav .nav-links li:hover {
+    background-color: var(--primary-color);
+    color: #ffff;
+    height: 30px;
+    width: 100px;
+    padding-top: 5px;
     padding-left: -8px;
-    transition: all 500ms ease-in-out;
+    border-radius: 5px;
+    transition: all .7s ease-in;
 }
 
-.nav .nav-links li:hover::after {
-    width: 100%;
+.nav .nav-links li a:hover {
+    color: #ffff;
 }
-
 
 .toggle {
     display: none;
@@ -132,7 +146,7 @@ body {
     display: flex;
     padding-top: 3.5rem;
     background-color: var(--hero-section-background-color);
-    margin-top: 18px;
+    margin-top: 35px;
 }
 
 .hero-section-text {
@@ -143,15 +157,18 @@ body {
 }
 
 .bold-txt {
-    font-size: 2.9rem;
+    font-size: 2.5rem;
     margin-bottom: 25px;
     font-family: var(--main-font);
+    margin-top: 15px;
+    line-height: 62px;
 }
 
 .paragraph-txt {
     width: 40rem;
     margin-bottom: 20px;
-    font-size: 14px;
+    font-size: 12.5px;
+    line-height: 27px;
 }
 
 span {
@@ -162,8 +179,10 @@ input {
     width: 22rem;
     height: 50px;
     padding-left: 15px;
-    margin: 20px 20px 20px 0;
+    margin: 0px 20px 20px 0;
     border-radius: 5px;
+    border: 1px solid black;
+    background-color: transparent;
 }
 
 .input-button {
@@ -173,6 +192,8 @@ input {
     border: none;
     color: #ffff;
     background-color: var(--primary-color);
+    box-shadow: 2px 5px 10px 0px rgba(0, 0, 0, 0.1);
+
 }
 
 .small-txt {
@@ -199,8 +220,8 @@ input {
 .icon {
     position: absolute;
     width: 40px;
-    top: 8.3rem;
-    right: 31.5rem;
+    margin-top: -.5rem;
+    margin-left: 1rem;
 }
 
 .second-image {
@@ -232,7 +253,7 @@ input {
     float: right;
     margin-top: -5rem;
     margin-right: 13rem;
-    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 5px 10px 0px rgba(0, 0, 0, 0.1);
 }
 
 .bagIcon {
@@ -241,17 +262,32 @@ input {
 }
 
 .apply-button {
-    width: 5rem;
-    height: 28px;
-    border-radius: 30px;
+    width: 5.5rem;
+    height: 45px;
+    border-radius: 5px;
     border: none;
-    color: #ffff;
     background-color: var(--primary-color);
     margin-left: 5.5rem;
     position: relative;
-    top: -1.4rem;
-    font-size: 14px;
+    top: -2rem;
+    font-size: 15px;
     font-weight: 650;
+    cursor: pointer;
+}
+
+.apply-button a {
+    color: #ffff;
+
+}
+
+.apply-button:hover {
+    background-color: #f9f7f7;
+    transition: all .5s ease-in-out;
+
+}
+
+.apply-button a:hover {
+    color: black;
 }
 
 .second-section {
@@ -270,18 +306,19 @@ input {
 }
 
 .bolder-txt {
-    font-size: 31px;
+    font-size: 28px;
     font-family: var(--main-font);
     margin-top: 20px;
+    line-height: 32px;
 }
 
 .content-detail {
-    width: 80%;
+    width: 65%;
     padding-top: 50px;
     padding-left: 30px;
     padding-right: 80px;
-    line-height: 28px;
-    font-size: 15px;
+    line-height: 32px;
+    font-size: 13px;
 }
 
 .second-button {
@@ -292,6 +329,11 @@ input {
     color: #ffff;
     color: var(--primary-color);
     background-color: transparent;
+}
+
+.second-button:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 .second-button-content {
@@ -321,8 +363,8 @@ input {
 
 .secondIcon {
     position: relative;
-    left: 27rem;
-    bottom: 31.5rem;
+    left: -2.5rem;
+    bottom: 30.5rem;
     width: 40px;
 
 }
@@ -342,7 +384,7 @@ input {
 }
 
 .inner-third-section {
-    margin-top: 9.3rem;
+    margin-top: 9.5rem;
     margin-left: 9rem;
     display: flex;
 }
@@ -352,17 +394,18 @@ input {
     width: 87%;
     padding-left: 30px;
     padding-right: 80px;
-    line-height: 20px;
+    line-height: 27px;
 }
 
 .circle-icon {
-    width: 32px;
+    width: 35px;
     margin-top: 20px;
 }
 
 .learn-more {
     display: flex;
-    margin-top: 50px;
+    margin-top: 30px;
+
 
 }
 
@@ -376,11 +419,18 @@ input {
     font-size: 14px;
     font-weight: 700;
     position: relative;
+    cursor: pointer;
     right: 3.5rem;
+    margin-top: -10px;
+    box-shadow: 3px 5px 10px 0px rgba(209, 229, 244, 0.5);
+    
+}
+.more-button:hover{
+    background-color: #ffff;
 }
 
 .sign-up {
-    padding-top: 12px;
+    padding-top: -2rem;
 }
 
 .sign-up a {
@@ -398,10 +448,10 @@ input {
 }
 
 .forth-section-content p {
-    font-size: 14px;
+    font-size: 12px;
     padding-right: 40px;
     padding-top: 30px;
-    line-height: 25px;
+    line-height: 27px;
     width: 288px;
 }
 
@@ -438,12 +488,13 @@ input {
 .faq-border {
     margin-bottom: 20px;
     padding: 18px;
-    width: 90%;
+    width: 96%;
     margin-top: 40px;
     overflow: hidden;
     transition: max-height 0.3s ease;
-    max-height: 98px;
+    max-height: 300px;
     border: 2px solid #b8bbbe;
+
 }
 
 .answer {
@@ -467,8 +518,9 @@ input {
 
 .faq-border p {
     font-size: 13px;
-    line-height: 20px;
+    line-height: 27px;
     width: 70%;
+    padding-top: -10px;
 }
 
 .faq-border h5 {
@@ -478,9 +530,6 @@ input {
     cursor: pointer;
 }
 
-.faq-item {
-    margin-bottom: 20px;
-}
 
 
 .plus-icon {
@@ -496,6 +545,7 @@ input {
     font-size: 25px;
     margin-top: 30px;
     font-family: var(--main-font);
+
 }
 
 .contact-us-button {
@@ -507,10 +557,18 @@ input {
     font-size: 14px;
     font-weight: 700;
     margin-bottom: 100px;
+    box-shadow: 2px 5px 10px 0px rgba(225, 225, 225, 0.6);
 }
 
 .contact-us-button a {
     color: #ffff;
+}
+.contact-us-button:hover{
+    background-color: #ffff;
+}
+
+.contact-us-button a:hover{
+color: var(--secondary-color);
 }
 
 .last-section {
@@ -532,10 +590,11 @@ input {
 }
 
 .last-section p {
-    width: 95%;
+    width: 90%;
     margin-top: 60px;
     padding-right: 80px;
-    line-height: 30px;
+    line-height: 27px;
+    font-size: 14px;
 }
 
 .join-button {
@@ -547,6 +606,11 @@ input {
     font-size: 13.5px;
     font-weight: 700;
     margin-top: 50px;
+    box-shadow: 2px 5px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.join-button:hover {
+    background-color: #47b0e4;
 }
 
 .join-button a {
@@ -564,10 +628,20 @@ input {
     font-weight: 700;
     margin-top: 50px;
     margin-left: 10px;
+    box-shadow: 2px 5px 10px 0px rgba(0, 0, 0, 0.2);
 }
 
 .learn-button a {
     color: white;
+}
+.learn-button:hover{
+    background-color: #ffff;
+    border: 1px solid black;
+    
+    
+}
+.learn-button a:hover{
+color: black;
 }
 
 footer {
@@ -775,6 +849,7 @@ hr {
         font-size: 15px;
         width: 360px;
     }
+
     .secondIcon {
         display: none;
     }
@@ -826,11 +901,12 @@ hr {
         line-height: 25px;
 
     }
-    .inner-third-section-details p{
-       width: 240px;
+
+    .inner-third-section-details p {
+        width: 240px;
     }
 
-    
+
 
     .learn-more {
         width: 300px;
@@ -859,10 +935,11 @@ hr {
         display: block;
         margin-top: 20px;
     }
-    .forth-section-content img{
+
+    .forth-section-content img {
         padding-top: 3rem;
     }
-    
+
     .faq-section {
         display: block;
         width: 100%;
@@ -902,24 +979,35 @@ hr {
         text-align: start;
     }
 
-     .last-section p {
+    .last-section p {
         margin-top: -10px;
         padding-left: 60px;
-    } 
+    }
 
     .last-section button {
         margin-left: 35px;
 
     }
 
-    footer {
-        display: none;
+    hr {
+        margin-left: 1rem;
     }
+
 }
 
 
+@media screen and (max-width: 380px) {
+    .inner-third-section div img {
+        width: 30px;
+        margin-left: -5rem;
+        margin-top: -5rem;
+    }
 
+    .inner-third-section-details p {
+        width: 200px;
+    }
 
+}
 
 
 
