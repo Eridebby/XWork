@@ -775,16 +775,16 @@ hr {
     .nav .nav-links li a {
         text-decoration: none;
         color: #ffff;
-        font-size: 35px;
+        font-size: 30px;
         padding: 20px;
     }
 
     .nav .nav-links li:hover {
         background-color: var(--primary-color);
         color: #ffff;
-        height: 65px;
+        height: 75px;
         width: 200px;
-        padding-top: 5px;
+        padding-top: 15px;
         padding-left: -8px;
         border-radius: 5px;
         transition: all .7s ease-in;
