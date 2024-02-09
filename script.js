@@ -1,3 +1,33 @@
+function emailSend(){
+  Email.send({
+    Host : "smtp.elasticemail.com",
+    Username : "erioluwadeborah@gmail.com",
+    Password : "8BD2472BA0BB1A1A15AE92E79BF11DCF8E53",
+    To : 'deboraherioluwa@gmail.com',
+    From : "erioluwadeborah@gmail.com",
+    Subject : "This is the subject",
+    Body : "And this is the body"
+}).then(
+  message => alert(message)
+);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const navLinks = document.querySelector(".nav-links");
 const navButton = document.querySelector(".button");
 
@@ -18,39 +48,12 @@ function hideMobileNav() {
   bar.classList.remove("hide");
 }
 
-// document.addEventListener('DOMContentLoaded', function () {
-//     const faqQuestions = document.querySelectorAll('.faq-question');
 
-//     faqQuestions.forEach(function (question) {
-//         question.addEventListener('click', function () {
-//             const answer = this.nextElementSibling;
 
-//             if (answer.style.display === 'block') {
-//                 answer.style.display = 'none';
-//             } else {
-//                 answer.style.display = 'block';
-//             }
+const faqs = document.querySelectorAll(".faq")
 
-//         });
-//     });
-// });
-
-function toggleAnswer(questionNumber) {
-  let answer = document.getElementById("answer" + questionNumber);
-
-  // Hide all answers
-  let allAnswers = document.querySelectorAll(".answer");
-  allAnswers.forEach(function (ans) {
-    ans.style.display = "none";
+  faqs.forEach(faq => {
+    faq.addEventListener("click", event => {
+      faq.classList.toggle("active");
+    });
   });
-
-  // Toggle the display of the clicked answer
-  if (answer.style.display === "block") {
-    answer.style.display = "none";
-  } else {
-    answer.style.display = "block";
-  }
-}
-
-
-  
